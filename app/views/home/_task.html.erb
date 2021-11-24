@@ -1,0 +1,10 @@
+<li id="<%= dom_id(task) %>">
+
+  <%= check_box_tag "checkbox-#{task.id}", true, task.status , data: { remote: true, url: task_path(task), params: { id: task.id, status: "pushed"}.to_param, method: "put" }%>
+  
+  <%= task.title  %>
+  <% unless task.deadline.nil? %>
+    , to read: <%= task.deadline.strftime('%D')  %>
+  <% end %>
+  <%= link_to "", task_path(task), method: :delete, class: "fas fa-trash-alt", remote: true %>
+</li>

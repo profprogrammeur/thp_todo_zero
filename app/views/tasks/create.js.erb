@@ -1,0 +1,4 @@
+<%# alert("le fichier JS est exécuté!"); %>
+<%# document.getElementsByClassName("card")[0].firstElementChild.insertAdjacentHTML("beforeend", "<li> FKUC </li>") %>
+
+document.getElementById("<%= dom_id(@category) %>").insertAdjacentHTML("beforeend", "<%= j render '/home/task', task: @task %>")
