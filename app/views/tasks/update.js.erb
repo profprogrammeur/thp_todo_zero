@@ -1,0 +1,9 @@
+
+task = document.getElementById("<%= "checkbox-#{@task.id}" %>");
+<% if @task.status %>
+    <%# task.setAttribute("checked", "checked"); %>
+    task.parentNode.style.textDecoration = "line-through solid rgb(68, 68, 68)";
+<% else %>
+    <%# task.removeAttribute('checked'); %>
+    task.parentNode.style.textDecoration = "";
+<% end %>
