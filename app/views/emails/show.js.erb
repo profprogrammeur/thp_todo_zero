@@ -5,3 +5,4 @@ emailObject.innerText="LOL"
 document.getElementById("emailDisplay").appendChild(aa) %>
 document.getElementById("emailDisplay").innerHTML=""
 document.getElementById("emailDisplay").insertAdjacentHTML("beforeend", "<%= j render '/home/emailDisplay', email: @email %>")
+document.getElementById("<%= dom_id(@email) %>").classList.add('bg-info')
