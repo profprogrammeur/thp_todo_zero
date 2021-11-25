@@ -1,2 +1,2 @@
-alert("l'élément du DOM à l'id : '<%= dom_id(@email) %>' va être détruit!");
+alert("ATTENTION l'élément du DOM à l'id : '<%= dom_id(@email) %>' va être détruit!");
 document.querySelectorAll(".<%= dom_id(@email) %>").forEach(el => el.remove());
