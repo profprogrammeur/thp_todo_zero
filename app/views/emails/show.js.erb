@@ -1,0 +1,7 @@
+<%# alert("SHOW.JS") %>
+
+<%# let emailObject=document.createElement("h3")
+emailObject.innerText="LOL"
+document.getElementById("emailDisplay").appendChild(aa) %>
+document.getElementById("emailDisplay").innerHTML=""
+document.getElementById("emailDisplay").insertAdjacentHTML("beforeend", "<%= j render '/home/emailDisplay', email: @email %>")

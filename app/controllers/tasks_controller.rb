@@ -9,8 +9,6 @@ before_action :authenticate_user!
     @category = Category.find(category_params)
     @task.category = @category
 
-
-
     if @task.save
       ####################     
       respond_to do |format|

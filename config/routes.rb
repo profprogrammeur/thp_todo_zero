@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  # get 'emails/index'
+  get 'home', to: 'home#index'
   devise_for :users
-  root to: "home#index"
+  root to: "emails#index"
   resources :tasks, except: [:show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :emails
+  # resources :home
 end

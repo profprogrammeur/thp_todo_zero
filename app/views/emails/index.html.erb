@@ -1,0 +1,38 @@
+
+<div class="container">
+
+  <h1>Emails#index</h1>
+  <p>Find me in app/views/emails/index.html.erb</p>
+
+  <div class="m-5">
+    <%# <button type="button" class="btn btn-info">recevoir un email</button> %>
+  <%= link_to "recevoir un email", new_email_path, class: "btn btn-info",remote: true  %>
+
+  </div>
+
+  <div class="row bg-info">
+    <div class="col-3">Liste des emails</div>
+    <div class="col-9">Email sélectionné</div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+    <ul class="list-group" id="emailObjects">
+      <% @emails.each do |email|  %>
+      
+      <li class="list-group-item <%= dom_id(email) %>"> <%= link_to email.object, email_path(email.id), class: "", remote: true %></li>
+
+      <% end %>
+    </ul>
+  </div>
+  <div class="col-9" id="emailDisplay">
+    <%# <p>Celui qui en sait beaucoup sur les autres est peut-être instruit,
+    mais celui qui se comprend lui-même est plus intelligent.
+    </p> %>
+  </div>
+
+ 
+     
+    
+
+</div>
+

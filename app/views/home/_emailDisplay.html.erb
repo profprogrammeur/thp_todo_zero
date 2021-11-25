@@ -1,0 +1,17 @@
+<div class="container <%= dom_id(email) %>">
+  <div class="card "  style="width: 18rem;">
+    <h5 class="card-title text-center ">
+    <%= @email.object%>
+    </h5>
+    <div class="card-body"  ">
+      <p class="card-text"><%= @email.body%></p>
+    </div>
+
+      <%= link_to "Marquer comme non-lu", email_path, class: "btn btn-info",remote: true  %>
+        
+      <%= link_to "Supprimer", email_path(email),  method: :delete, class: "btn btn-danger",remote: true  %>
+
+
+
+  </div>
+</div>
