@@ -48,7 +48,7 @@ class EmailsController < ApplicationController
 
     def update
       @email = Email.find(params[:id])
-      # @email.read
+      @email.read === true
       respond_to do |format|
         format.html { redirect_to emails_path }
         format.js { }
